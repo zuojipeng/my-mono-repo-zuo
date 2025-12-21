@@ -3,6 +3,7 @@ import { parseUnits, decodeEventLog, type Log } from 'viem';
 import { useWriteContract, useWaitForTransactionReceipt, usePublicClient } from 'wagmi';
 import { COURSE_PLATFORM_ADDRESS, COURSE_PLATFORM_ABI } from '../../../costruct.config';
 import { CURRENT_CHAIN_ID } from '@zuojipeng/my-libs/wagmi';
+import { useImmer } from '@zuojipeng/my-hooks';
 import PinataUpload from './PinataUpload';
 
 // 类型定义
@@ -34,7 +35,7 @@ const STATUS: Record<string, StatusType> = {
 } as const;
 
 export default function CreateCourseModal({ isOpen, onClose, onSuccess }: CreateCourseModalProps): React.ReactElement | null {
-  const [formData, setFormData] = useState<FormData>({ name: '', description: '', price: '10' });
+  const [formData, setFormData] = useImmer<FormData>({ name: '', description: '', price: '10' });
   const [contentHash, setContentHash] = useState<string>('');
   const [thumbnailHash, setThumbnailHash] = useState<string>('');
   const [status, setStatus] = useState<StatusType>(STATUS.IDLE);
@@ -127,7 +128,9 @@ export default function CreateCourseModal({ isOpen, onClose, onSuccess }: Create
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormData((draft) => {
+      (draft as unknown as Record<string, string>)[name] = value;
+    });
   };
 
   const validateForm = (): boolean => {
@@ -224,7 +227,7 @@ export default function CreateCourseModal({ isOpen, onClose, onSuccess }: Create
   };
 
   const resetForm = (): void => {
-    setFormData({ name: '', description: '', price: '10' });
+    setFormData(() => ({ name: '', description: '', price: '10' }));
     setContentHash('');
     setThumbnailHash('');
     setStatus(STATUS.IDLE);

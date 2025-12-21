@@ -1,0 +1,45 @@
+{
+  "name": "@zuojipeng/my-hooks",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./useImmer": {
+      "import": "./dist/useImmer.js",
+      "types": "./dist/useImmer.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^19.0.0"
+  },
+  "dependencies": {
+    "immer": "^11.0.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^29.0.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-typescript": "^12.3.0",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.2.3",
+    "rollup": "^4.54.0",
+    "rollup-plugin-dts": "^6.3.0",
+    "typescript": "^5.9.3"
+  },
+  "packageManager": "pnpm@10.26.0"
+}
