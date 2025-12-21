@@ -1,0 +1,4 @@
+# Cloudflare Pages Redirects
+# SPA fallback - 所有路径都返回 index.html
+/*    /index.html   200
+

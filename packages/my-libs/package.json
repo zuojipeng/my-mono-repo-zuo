@@ -1,0 +1,37 @@
+{
+  "name": "@zuojipeng/my-libs",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./wagmi": {
+      "import": "./dist/wagmi.js",
+      "types": "./dist/wagmi.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "wagmi": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.9.3",
+    "wagmi": "^3.1.0"
+  },
+  "packageManager": "pnpm@10.26.0"
+}
