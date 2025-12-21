@@ -19,9 +19,9 @@
   ],
   "scripts": {
     "build": "pnpm run build:css && tsup src/index.ts --format esm,cjs --dts --clean --out-dir dist",
-    "build:css": "tailwindcss -i src/styles.css -o dist/styles.css --minify",
+    "build:css": "pnpm exec tailwindcss -i src/styles.css -o dist/styles.css --minify",
     "dev": "tsup src/index.ts --format esm,cjs --dts --watch --out-dir dist",
-    "dev:css": "tailwindcss -i src/styles.css -o dist/styles.css --watch",
+    "dev:css": "pnpm exec tailwindcss -i src/styles.css -o dist/styles.css --watch",
     "lint": "tsc --noEmit",
     "prepublishOnly": "pnpm build"
   },
@@ -36,9 +36,10 @@
     "clsx": "^2.1.1"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.20",
+    "@tailwindcss/cli": "^4.1.18",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.4.20",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.17",
     "tsup": "^8.3.5",

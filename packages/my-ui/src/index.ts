@@ -10,5 +10,4 @@ export {
   CardFooter,
 } from "./components/Card";
 export * from "./types";
-import "./styles.css";
 
