@@ -13,6 +13,14 @@
     "./useImmer": {
       "import": "./dist/useImmer.js",
       "types": "./dist/useImmer.d.ts"
+    },
+    "./useDebounce": {
+      "import": "./dist/useDebounce.js",
+      "types": "./dist/useDebounce.d.ts"
+    },
+    "./useLocalStorage": {
+      "import": "./dist/useLocalStorage.js",
+      "types": "./dist/useLocalStorage.d.ts"
     }
   },
   "files": [
