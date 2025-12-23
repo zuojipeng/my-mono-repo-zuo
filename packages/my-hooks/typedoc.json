@@ -1,0 +1,26 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["src/index.ts"],
+  "out": "docs",
+  "plugin": [],
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "excludeExternals": true,
+  "readme": "README.md",
+  "name": "@zuojipeng/my-hooks",
+  "includeVersion": true,
+  "sort": ["source-order"],
+  "visibilityFilters": {
+    "protected": false,
+    "private": false,
+    "inherited": true,
+    "external": false
+  },
+  "navigation": {
+    "includeCategories": true,
+    "includeGroups": true
+  },
+  "searchInComments": true,
+  "categorizeByGroup": true
+}
+
