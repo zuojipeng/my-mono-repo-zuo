@@ -1,6 +1,6 @@
 {
   "name": "@zuojipeng/my-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "基于 React + TypeScript + Tailwind 的 UI 组件库",
   "type": "module",
   "main": "./dist/index.cjs",
