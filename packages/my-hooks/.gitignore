@@ -3,4 +3,7 @@ dist
 docs
 *.log
 .DS_Store
+/DOCS.md
+
+
 

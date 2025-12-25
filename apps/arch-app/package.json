@@ -4,6 +4,9 @@
   "description": "A decentralized course trading platform built on Ethereum blockchain with IPFS storage",
   "main": "index.ts",
   "scripts": {
+    "dev": "pnpm client:server",
+    "build": "pnpm client:prod",
+    "typecheck": "tsc --noEmit",
     "client:dev": "webpack --mode development",
     "client:prod": "webpack --mode production",
     "client:server": "webpack serve --mode development --open",

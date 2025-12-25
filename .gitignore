@@ -40,6 +40,9 @@ Thumbs.db
 temp/
 tmp/
 
+# Turborepo
+.turbo/
+
 # TypeScript
 *.tsbuildinfo
 
@@ -47,4 +50,6 @@ tmp/
 cypress/screenshots/
 cypress/videos/
 cypress/downloads/
+
+
 
