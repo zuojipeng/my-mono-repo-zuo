@@ -15,6 +15,7 @@ build/
 .env.test.local
 .env.production.local
 .npmrc
+ai-context/
 
 # Logs
 npm-debug.log*
